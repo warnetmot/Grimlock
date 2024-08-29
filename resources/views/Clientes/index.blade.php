@@ -7,16 +7,31 @@
 @stop
 
 @section('content')
-    <a href="{{ route('Clientes.create') }}" class="btn btn-primary">Agregar Cliente</a></br></br>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    
+    <a href="{{ route('Clientes.create') }}" class="btn btn-primary">Agregar Cliente</a>
+
+    <form action="{{ route('Clientes.index') }}" method="GET" class="form-inline ml-auto">
+        <div class="input-group">
+            <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar cliente..." value="{{ request('search') }}">
+            <div class="input-group-append">
+                <button class="btn btn-secondary btn-sm" type="submit">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
     <table class="table table-bordered mt-4">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>CI</th>
+                <th>Nombre y Apellido</th>
+                <th>CI</th> 
                 <th>Teléfono</th>
-                <th>Direccion</th>
+                <th>Correo electronico</th>
                 <th>Género</th>
                 <th>Acciones</th>
             </tr>
@@ -25,11 +40,10 @@
             @foreach ($clientes as $cliente)
                 <tr>
                     <td>{{ $cliente->id }}</td>
-                    <td>{{ $cliente->nombre }}</td>
-                    <td>{{ $cliente->apellido}}</td>
+                    <td>{{ $cliente->nombre}} {{ $cliente-> apellido}}</td>
                     <td>{{ $cliente->ci }}</td>
                     <td>{{ $cliente->telefono }}</td>
-                    <td>{{ $cliente->direccion }}</td>
+                    <td>{{ $cliente->correo }}</td>
                     <td>{{ $cliente->genero }}</td>
                     <td>
                         <a href="{{ route('Clientes.edit', $cliente->id) }}" class="btn btn-dark btn-sm"><i class="fas fa-edit"></i></a>
