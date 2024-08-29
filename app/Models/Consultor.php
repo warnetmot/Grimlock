@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Consultor extends Model
 {
     use HasFactory;
+    protected $fillable = ['nombre', 'apellido', 'ci', 'profesion', 'experiencia', 'email', 'telefono', 'direccion'];
+
+    public function formacion(){
+        return $this->hasMany(Formacion::class);
+    }
 }
