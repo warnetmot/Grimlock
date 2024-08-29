@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Formacion extends Model
 {
     use HasFactory;
+    protected $fillable = ['especialidad', 'nivel', 'institucion', 'consultor_id'];
+
+    public function consultor(){
+        return $this->belongsTo(Consultor::class);
+    }
 }

@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('consultores', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellido')->nullable();
+            $table->string('ci')->unique();
+            $table->string('profesion')->nullable();
+            $table->integer('experiencia')->nullable();
+            $table->string('email')->unique();
+            $table->string('telefono')->nullable();
+            $table->text('direccion')->nullable();
             $table->timestamps();
         });
     }
