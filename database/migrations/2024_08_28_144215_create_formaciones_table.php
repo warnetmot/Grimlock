@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('formaciones', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('consultor_id')->constrained('consultores')->onDelete('cascade');
             $table->string('especialidad')->nullable();
             $table->string('nivel')->nullable();
-            $table->integer('institucion')->nullable();
-            $table->foreignId('consultor_id')->constrained('consultores')->onDelete('cascade');
+            $table->string('institucion')->nullable();
             $table->timestamps();
         });
     }

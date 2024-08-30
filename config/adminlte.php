@@ -317,21 +317,19 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Inicio',
+            'url' => 'home',
+            'icon' => 'fas fa-fw fa-home',
         ],
         [
             'text' => 'Consultores',
             'url' => 'Consultores',
-            'icon' => 'fas fa fa-street-view',
-            'submenu' => [
-                [
-                    'text' => 'Nivel de formación',
-                    'url' => 'Formaciones',
-                    'icon' => 'fas fa fa-mortar-board',
-                ],
-            ],
+            'icon' => 'fas fa fa-id-card',
+        ],
+        [
+            'text' => 'Nivel de formación',
+            'url' => 'Formaciones',
+            'icon' => 'fas fa-graduation-cap',
         ],
         [
             'text' => 'Clientes',
