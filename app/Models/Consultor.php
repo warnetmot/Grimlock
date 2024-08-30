@@ -9,7 +9,7 @@ class Consultor extends Model
 {
     use HasFactory;
 
-    protected $table = 'consultores'; 
+    protected $table = 'consultores';
     protected $fillable = ['nombre', 'apellido', 'ci', 'profesion', 'experiencia', 'email', 'telefono', 'direccion'];
 
     public function formacion(){

@@ -10,39 +10,43 @@ class ConsultorController extends Controller
     public function index()
     {
         $consultores = Consultor::all();
-        return view('Consultor.index', compact('consultores'));
+        return view('Consultores.index', compact('consultores'));
     }
 
     public function create()
     {
-        return view('Consultor.create');
+        return view('Consultores.create');
     }
 
     public function store(Request $request)
     {
         Consultor::create($request->all());
-        return redirect()->route('Consultor.index')->with('success', 'El consultor fue creado correctamente');
+        return redirect()->route('Consultores.index')->with('success', 'El consultor fue creado correctamente');
     }
 
-    public function show(Consultor $consultor)
+    public function show(string $id)
     {
-        return view('Consultor.show', compact('consultor'));
+        $consultor = Consultor::find($id);
+        return view('Consultores.show', compact('consultor'));
     }
 
-    public function edit(Consultor $consultor)
+    public function edit($id)
     {
-        return view('Consultor.edit', compact('consultor'));
+        $consultor = Consultor::find($id);
+        return view('Consultores.edit', compact('consultor'));
     }
 
-    public function update(Request $request, Consultor $consultor)
+    public function update(Request $request, $id)
     {
+        $consultor = Consultor::find($id);
         $consultor->update($request->all());
-        return redirect()->route('Consultor.index')->with('success', 'El consultor se ha modificado correctamente');
+        return redirect()->route('Consultores.index')->with('success', 'El consultor se ha modificado correctamente');
     }
 
-    public function destroy(Consultor $consultor)
+    public function destroy(string $id)
     {
+        $consultor = Consultor::find($id);
         $consultor->delete();
-        return redirect()->route('Consultor.index')->with('success', 'El consultor fue eliminado correctamente');
+        return redirect()->route('Consultores.index')->with('success', 'El consultor fue eliminado correctamente');
     }
 }

@@ -13,11 +13,6 @@ return new class extends Migration
     {
         Schema::create('consultas', function (Blueprint $table) {
             $table->id();
-            $table->text('detalle');
-            $table->decimal('costo_servicio', 10, 2);
-            $table->integer('tiempo_ejecucion');
-            $table->foreignId('consultor_id')->constrained('consultores') ->onDelete('cascade');
-            $table->foreignId('cliente_id')->constrained('clientes') ->onDelete('cascade');
             $table->timestamps();
         });
     }
