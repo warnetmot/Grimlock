@@ -3,11 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>panel de control </h1>
+    <h1> Inicio  </h1>
 @stop
 
 @section('content')
-    <p>Bienbenido al panel de control de laravel .</p>
+    <p>Bienbenido al panel de control de de JP_CONSTULTORES .</p>
 @stop
 
 @section('css')

@@ -317,8 +317,8 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Inicio',
+            'url' => 'home',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
