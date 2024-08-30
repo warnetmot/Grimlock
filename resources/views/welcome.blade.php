@@ -58,7 +58,7 @@
                             </div>
 
                             <!-- Imagen al lado del contenido -->
-                            <img src="https://revistaconsultoria.com.mx/wp-content/uploads/2022/05/Que-es-una-empresa-de-consultoria-empresas.consultoras-que-hace-una-empresa-consultora-1-1536x1024.jpg" alt="Descripción de la imagen" class="w-24 h-24 object-cover rounded-lg ml-4">
+                            <img src="" alt="Descripción de la imagen" class="w-24 h-24 object-cover rounded-lg ml-4">
                         </div>
                     </a>
                     
