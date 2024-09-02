@@ -9,9 +9,9 @@ class Comprobante extends Model
 {
     use HasFactory;
     protected $table = 'comprobantes';
-    protected $fillable = ['consulta_id', 'fecha', 'detalle', 'importe'];
+    protected $fillable = ['consulta_id', 'fecha', 'detalle', 'importe', 'observaciones'];
 
-    public function consultor(){
+    public function consulta(){
         return $this->belongsTo(Consulta::class);
     }
 }

@@ -322,6 +322,11 @@ return [
             'icon' => 'fas fa-fw fa-home',
         ],
         [
+            'text' => 'Usuarios',
+            'url' => 'Usuarios',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'Consultores',
             'url' => 'Consultores',
             'icon' => 'fas fa fa-id-card',
