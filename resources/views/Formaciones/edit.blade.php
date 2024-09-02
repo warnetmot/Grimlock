@@ -14,7 +14,7 @@
                     <select name="consultor_id" id="consultor_id" class="form-control">
                         @foreach($consultores as $consultor)
                         <option value="{{ $consultor->id }}" @if($consultor->id == $formacion->consultor_id) selected @endif>
-                        {{ $consultor->nombre }}
+                        {{ $consultor->nombre . ' ' . $consultor->apellido }}
                         </option>
                         @endforeach
                     </select>

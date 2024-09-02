@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('comprobantes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('consulta_id')->constrained('consultas')->onDelete('cascade');
+            $table->date('fecha')->nullable();
+            $table->string('observaciones')->nullable();
             $table->timestamps();
         });
     }

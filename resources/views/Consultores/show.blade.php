@@ -6,12 +6,12 @@
 @section('content')
     <div >
         <div class="card-header">
-            <h3 class="card-title">{{$consultor->nombre . ' ' . $consultor->apellido}}</h3>
+            <h3 class="card-title font-weight-bold">{{$consultor->nombre . ' ' . $consultor->apellido}}</h3>
         </div>
         <div class="card-body">
             <p><strong>Cédula: </strong>{{$consultor->ci}}</p>
             <p><strong>Profesión: </strong>{{$consultor->profesion}}</p>
-            <p><strong>Experiencia: </strong>{{$consultor->experiencia}}</p>
+            <p><strong>Años de experiencia: </strong>{{$consultor->experiencia}}</p>
             <p><strong>Correo electrónico: </strong>{{$consultor->email}}</p>
             <p><strong>Teléfono: </strong>{{$consultor->telefono}}</p>
             <p><strong>Dirección: </strong>{{$consultor->direccion}}</p>

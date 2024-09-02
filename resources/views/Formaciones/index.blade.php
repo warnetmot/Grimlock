@@ -4,7 +4,19 @@
     <h1>Nivel de Formación</h1>
 @stop
 @section('content')
-    <a href="{{route('Formaciones.create')}}" class="btn btn-primary">Nueva Formación</a>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <a href="{{route('Formaciones.create')}}" class="btn btn-primary">Agregar Formación</a>
+    <form action="{{ route('Formaciones.index') }}" method="GET" class="form-inline ml-auto">
+        <div class="input-group">
+            <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar formaciones..." value="{{ request('search') }}">
+            <div class="input-group-append">
+                <button class="btn btn-secondary btn-sm" type="submit">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
     <table class="table table-bordered mt-12">
         <thead>
             <th width="30px">Nro.</th>

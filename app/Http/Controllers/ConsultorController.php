@@ -7,9 +7,16 @@ use App\Models\Consultor;
 
 class ConsultorController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $consultores = Consultor::all();
+        $search = $request->search;
+        if ($search) {
+            $consultores = Consultor::where('nombre', 'like', '%' . $search . '%')
+                                    ->orWhere('apellido', 'like', '%' . $search . '%')
+                                    ->get();
+        } else {
+            $consultores = Consultor::all();
+        }
         return view('Consultores.index', compact('consultores'));
     }
 
