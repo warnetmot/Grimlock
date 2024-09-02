@@ -323,7 +323,7 @@ return [
         ],
         [
             'text' => 'Usuarios',
-            'url' => 'Usuarios',
+            'url' => 'Users',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

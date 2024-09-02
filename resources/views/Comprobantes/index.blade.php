@@ -19,7 +19,7 @@
 </div>
     <table class="table table-bordered mt-12">
         <thead>
-            <th width="30px">Nro.</th>
+            <th width="30px">ID</th>
             <th>Detalle</th>
             <th>Importe</th>
             <th>Fecha</th>

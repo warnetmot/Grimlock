@@ -7,6 +7,7 @@ use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\ConsultorController;
 use App\Http\Controllers\FormacionController;
 use App\Http\Controllers\ComprobanteController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,5 @@ Route::resource('Consultores', ConsultorController::class);
 Route::resource('Formaciones', FormacionController::class);
 Route::resource('Consultas', ConsultaController::class);
 Route::resource('Comprobantes', ComprobanteController::class);
-
+Route::resource('Users', UserController::class);
 

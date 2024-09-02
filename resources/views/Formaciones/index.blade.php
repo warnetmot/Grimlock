@@ -19,7 +19,7 @@
 </div>
     <table class="table table-bordered mt-12">
         <thead>
-            <th width="30px">Nro.</th>
+            <th width="30px">ID</th>
             <th>Nombre del Consultor</th>
             <th>Especialidad</th>
             <th>Nivel</th>
