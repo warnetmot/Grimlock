@@ -36,7 +36,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="experiencia">Experiencia: </label>
+                    <label for="experiencia">Experiencia en años: </label>
                     <input type="number" id="experiencia" name="experiencia" class="form-control" required>
                 </div>
             </div>

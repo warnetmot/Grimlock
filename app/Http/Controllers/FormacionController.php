@@ -8,9 +8,16 @@ use App\Models\Consultor;
 
 class FormacionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $formaciones = Formacion::with('consultor')->get();
+        $search = $request->search;
+        if ($search) {
+            $formaciones = Formacion::where('especialidad', 'like', '%' . $search . '%')
+                                    ->orWhere('institucion', 'like', '%' . $search . '%')
+                                    ->get();
+        } else {
+            $formaciones = Formacion::with('consultor')->get();
+        }
         return view('Formaciones.index', compact('formaciones'));
     }
 

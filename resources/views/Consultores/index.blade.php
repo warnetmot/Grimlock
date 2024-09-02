@@ -4,17 +4,27 @@
     <h1>Consultores</h1>
 @stop
 @section('content')
-    <a href="{{route('Consultores.create')}}" class="btn btn-primary">Nuevo Consultor</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a href="{{route('Consultores.create')}}" class="btn btn-primary">Agregar Consultor</a>
+        <form action="{{ route('Consultores.index') }}" method="GET" class="form-inline ml-auto">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar consultor..." value="{{ request('search') }}">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary btn-sm" type="submit">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
     <table class="table table-bordered mt-12">
         <thead>
             <th width="30px">Nro.</th>
-            <th>Nombre</th>
+            <th>Nombre completo</th>
             <th>Cédula</th>
             <th>Profesión</th>
-            <th>Experiencia</th>
             <th>Email</th>
             <th>Teléfono</th>
-            <th>Dirección</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -24,10 +34,8 @@
                     <td>{{$consultor->nombre . ' ' . $consultor->apellido}}</td>
                     <td>{{$consultor->ci}}</td>
                     <td>{{$consultor->profesion}}</td>
-                    <td>{{$consultor->experiencia}}</td>
                     <td>{{$consultor->email}}</td>
                     <td>{{$consultor->telefono}}</td>
-                    <td>{{$consultor->direccion}}</td>
                     <td>
                         <a href="{{route('Consultores.edit', $consultor)}}" class="btn btn-dark btn-sm"><i class="fas fa-edit"></i></a>
                         <a href="{{route('Consultores.show', $consultor)}}" class="btn btn-info btn-sm"><i class="fas fa-eye"></i></a>

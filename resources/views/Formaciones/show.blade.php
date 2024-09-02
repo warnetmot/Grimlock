@@ -6,7 +6,7 @@
 @section('content')
     <div>
         <div class="card-header">
-            <strong><h3 class="card-title">{{$formacion->consultor->nombre . ' ' . $formacion->consultor->apellido}}</h3></strong>
+            <h3 class="card-title font-weight-bold">{{$formacion->consultor->nombre . ' ' . $formacion->consultor->apellido}}</h3>
         </div>
         <div class="card-body">
             <p><strong>Especialidad: </strong>{{$formacion->especialidad}}</p>
